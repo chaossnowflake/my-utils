@@ -17,7 +17,7 @@ public class StringUtils {
   /**
    * Indicates if String is empty.
    *
-   * @param str to check for empty.
+   * @param str to check if empty.
    * @return true of empty; false otherwise.
    */
   public static boolean isEmpty(final String str) {
