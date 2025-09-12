@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <name>my-utils</name>
@@ -9,7 +7,7 @@
 
   <groupId>org.utils</groupId>
   <artifactId>my-utils</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
 
   <properties>
     <maven.compiler.source>21</maven.compiler.source>
@@ -36,6 +34,6 @@
     <connection>scm:git:git://github.com/chaossnowflake/my-utils</connection>
     <developerConnection>scm:git:ssh://git@github.com:chaossnowflake/my-utils.git</developerConnection>
     <url>https://github.com/chaossnowflake/my-utils</url>
-    <tag>HEAD</tag>
+    <tag>my-utils-1.0</tag>
   </scm>
 </project>
