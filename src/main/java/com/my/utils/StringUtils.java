@@ -13,4 +13,14 @@ public class StringUtils {
   public static int length(final String str) {
     return str == null ? 0 : str.length();
   }
+
+  /**
+   * Indicates if String is empty.
+   *
+   * @param str to check for empty.
+   * @return true of empty; false otherwise.
+   */
+  public static boolean isEmpty(final String str) {
+    return str == null || str.isEmpty();
+  }
 }
