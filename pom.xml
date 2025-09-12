@@ -31,9 +31,9 @@
   </distributionManagement>
 
   <scm>
-    <connection>scm:git:git://github.com/chaossnowflake/my-utils</connection>
-    <developerConnection>scm:git:ssh://git@github.com:chaossnowflake/my-utils.git</developerConnection>
+    <connection>scm:git:https://github.com/chaossnowflake/my-utils.git</connection>
+    <developerConnection>scm:git:git@github.com:chaossnowflake/my-utils.git</developerConnection>
     <url>https://github.com/chaossnowflake/my-utils</url>
-    <tag>my-utils-1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 </project>
