@@ -7,13 +7,13 @@
   <name>my-utils</name>
   <description>A collection of useful utilities</description>
 
-  <groupId>org.bookshop</groupId>
+  <groupId>org.utils</groupId>
   <artifactId>my-utils</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <maven.compiler.source>22</maven.compiler.source>
-    <maven.compiler.target>22</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -27,10 +27,15 @@
   <distributionManagement>
     <repository>
       <id>github</id>
-      <name>etrandafir93</name>
-      <url>https://maven.pkg.github.com/etrandafir93/utilitest</url>
+      <name>chaossnowflake</name>
+      <url>https://maven.pkg.github.com/chaossnowflake/my-utils</url>
     </repository>
   </distributionManagement>
 
-
+  <scm>
+    <connection>scm:git:git://github.com/chaossnowflake/my-utils</connection>
+    <developerConnection>scm:git:ssh://git@github.com:chaossnowflake/my-utils.git</developerConnection>
+    <url>https://github.com/chaossnowflake/my-utils</url>
+    <tag>HEAD</tag>
+  </scm>
 </project>
