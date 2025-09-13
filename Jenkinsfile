@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+    environment {
+        SONAR_TOKEN = credentials('sonar-token')
+        GITHUB_PAT = credentials('github-pat')
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+                sh '''
+                  ls -la
+                  printenv
+                  ./mvnw -version
+                  ./mvnw clean test package
+                '''
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'printenv'
+                script {
+                  def version = sh(returnStdout: true, script: './mvnw help:evaluate -Dexpression=project.version -q -DforceStdout').trim()
+                  echo "version=$version"
+
+                  def commitMessage = sh(returnStdout: true, script: 'git log -1 --pretty=%B').trim()
+                  echo "git last commit message=$commitMessage"
+
+                  def skipRelease = (commitMessage ==~ /^(JIRA:MAINT-00000)\s.+$/)
+
+                  if (skipRelease) {
+                    echo "*** Skipping release ***"
+                  } else {
+                    if ('main'.equals(env.BRANCH_NAME)) {
+                      echo "*** Deploying to release repo ***"
+                    } else {
+                      echo "*** Deploying to snapshot repo ***"
+                    }
+                  }
+                }
+            }
+        }
+    }
+}
