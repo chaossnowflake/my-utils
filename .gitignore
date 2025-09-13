@@ -39,4 +39,3 @@ build/
 .m2
 release.properties
 pom.xml.releaseBackup
-.mvn/settings.xml
