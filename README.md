@@ -1,6 +1,6 @@
 # Maven Publish
 
-chaos2
+chaoss
 
 ## Commands
 
