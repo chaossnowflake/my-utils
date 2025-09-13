@@ -7,9 +7,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh '''
+                  ls -la
+                  printenv
+                  ./mvnw -version
+                  ./mvnw clean test package
+                '''
             }
         }
-        stage('Test') {
+        stage('Deploy') {
             steps {
                 sh '''
                     printenv
@@ -17,10 +23,6 @@ pipeline {
                 '''
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+
     }
 }
