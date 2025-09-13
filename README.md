@@ -1,6 +1,6 @@
 # Maven Publish
 
-chaossnowflak
+chaossnowflake
 
 ## Commands
 
