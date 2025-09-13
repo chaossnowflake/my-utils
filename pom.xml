@@ -7,7 +7,7 @@
 
   <groupId>org.utils</groupId>
   <artifactId>my-utils</artifactId>
-  <version>1.0.9-SNAPSHOT</version>
+  <version>1.0.10-SNAPSHOT</version>
 
   <properties>
     <maven.compiler.source>21</maven.compiler.source>
