@@ -37,5 +37,5 @@ build/
 ### Mac OS ###
 .DS_Store
 .m2
-release.properties
-pom.xml.releaseBackup
+#release.properties
+#pom.xml.releaseBackup
