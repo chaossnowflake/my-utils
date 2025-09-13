@@ -1,6 +1,6 @@
 # Maven Publish
 
-cha
+chao
 
 ## Commands
 
