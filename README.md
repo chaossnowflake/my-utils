@@ -1,6 +1,6 @@
 # Maven Publish
 
-a
+an
 
 ## Commands
 
