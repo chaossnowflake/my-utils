@@ -33,8 +33,17 @@ pipeline {
                   } else {
                     if ('main'.equals(env.BRANCH_NAME)) {
                       echo "*** Deploying to release repo ***"
+                      withCredentials([gitUsernamePassword(credentialsId: 'github-pat', gitToolName: 'git-tool')]) {
+                        sh '''
+                          ./mvnw release:prepare -DscmCommentPrefix="JIRA:MAINT-000000 "
+                          ./mvnw release:perform
+                        '''
+                      }
                     } else {
                       echo "*** Deploying to snapshot repo ***"
+                      sh '''
+                        ./mvnw deploy
+                      '''
                     }
                   }
                 }
