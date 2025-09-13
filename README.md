@@ -1,5 +1,5 @@
 # Maven Publish
-Publish change...
+Publish change....
 ## Commands
 
 ```shell
