@@ -5,6 +5,11 @@ pipeline {
         GITHUB_PAT = credentials('github-pat')
     }
     stages {
+        stage('Clean Workspace') {
+          steps {
+              deleteDir() // wipes out everything in the current workspace
+          }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -26,7 +31,7 @@ pipeline {
                   def commitMessage = sh(returnStdout: true, script: 'git log -1 --pretty=%B').trim()
                   echo "git last commit message=$commitMessage"
 
-                  def skipRelease = (commitMessage ==~ /^(JIRA:MAINT-00000)\s.+$/)
+                  def skipRelease = (commitMessage ==~ /^(JIRA:MAINT-000000)\s.+$/)
 
                   if (skipRelease) {
                     echo "*** Skipping release ***"
