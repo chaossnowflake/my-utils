@@ -35,8 +35,6 @@ pipeline {
                       echo "*** Deploying to release repo ***"
                       withCredentials([gitUsernamePassword(credentialsId: 'git-basic', gitToolName: 'git-tool')]) {
                         sh '''
-                          git fetch --tags --prune --prune-tags
-                          ./mvnw release:rollback
                           ./mvnw release:prepare -DscmCommentPrefix="JIRA:MAINT-000000 "
                           ./mvnw release:perform
                         '''
